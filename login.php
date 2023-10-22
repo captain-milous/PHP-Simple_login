@@ -12,12 +12,10 @@
             header("Location: welcome.php");
         } else {
             
-            echo "<script>
-                window.location.href = index.php;
-                alert('Špatné přihlašovací údaje.');
-            </script>";
+            echo '<script>
+                window.location.href = "index.php";
+                alert("Špatné přihlašovací údaje.");
+            </script>';
         }
     }
-
-
 ?>

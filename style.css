@@ -1,5 +1,6 @@
 body {
     background-color: bisque;
+    text-align: center;
 }
 
 #form {
@@ -9,6 +10,7 @@ body {
     padding: 50px;
     box-shadow: 5px 5px 5px rgb(10,10,10);
     border-radius: 15px;
+    vertical-align: middle;
 }
 #btn {
     color: black;

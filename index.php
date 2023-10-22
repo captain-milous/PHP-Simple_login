@@ -16,6 +16,7 @@
 
     <div id="form">
         <h1>Přihlášení</h1>
+        <br>
         <form name="form" action="login.php" method="POST">
             <label>Email: </label>
             <input type="email" id="user" name="user">
@@ -25,6 +26,8 @@
             <br><br>
             <input type="submit" id="btn" value="Přihlásit se" name="submit">
         </form>
+        <br><br>
+        <small>Nemáte účet? <a href="registration.php">Registrujte se</a></small>
     </div>
 
 </body>
