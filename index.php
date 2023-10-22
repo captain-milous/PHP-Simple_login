@@ -1,3 +1,6 @@
+<?php
+ include("connect.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +16,7 @@
 
     <div id="form">
         <h1>Přihlášení</h1>
-        <form name="form" method="POST">
+        <form name="form" action="login.php" method="POST">
             <label>Email: </label>
             <input type="email" id="user" name="user">
             <br><br>
