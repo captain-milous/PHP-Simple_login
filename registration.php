@@ -16,12 +16,15 @@
 
     <div id="form">
         <h1>Registrace</h1>
-        <form name="form-reg" action="login.php" method="POST">
+        <form name="form" action="register.php" method="POST">
             <label>Email: </label>
             <input type="email" id="user" name="user">
             <br><br>
             <label>Heslo: </label>
             <input type="password" id="pass" name="pass">
+            <br><br>
+            <label>Znovu: </label>
+            <input type="password" id="pass2" name="pass2">
             <br><br>
             <input type="submit" id="btn" value="Registrovat se" name="submit">
         </form>

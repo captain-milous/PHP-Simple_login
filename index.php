@@ -1,4 +1,5 @@
 <?php
+session_start();
  include("connect.php");
 ?>
 <!DOCTYPE html>
@@ -17,7 +18,7 @@
     <div id="form">
         <h1>Přihlášení</h1>
         <br>
-        <form name="form" action="login.php" method="POST">
+        <form name="form2" action="login.php" method="POST">
             <label>Email: </label>
             <input type="email" id="user" name="user">
             <br><br>
