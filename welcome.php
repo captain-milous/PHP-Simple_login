@@ -12,7 +12,7 @@
 <body>
 
     <div id="form">
-        <h1 id="msg"></h1>
+        <h1 id="msg">Úspěšně přihlášen!</h1>
         <a href="index.php" >  
             <button id="btn">Zpět na přihlášení</button>
         </a> 

@@ -27,7 +27,9 @@
             <input type="password" id="pass2" name="pass2">
             <br><br>
             <input type="submit" id="btn" value="Registrovat se" name="submit">
+            
         </form>
+        <small style="color: red">*Registrace je bohužel dnes mimo provoz.</small>
         <br>
         <small><a href="index.php">Zpět na přihlášení.</a></small>
     </div>
