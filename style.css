@@ -10,3 +10,17 @@ body {
     box-shadow: 5px 5px 5px rgb(10,10,10);
     border-radius: 15px;
 }
+#btn {
+    color: black;
+    background-color: bisque;
+    padding: 10px;
+    font-size: large;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    #form {
+        width: 65%;
+        padding: auto;
+    }
+}

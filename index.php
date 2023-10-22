@@ -10,17 +10,17 @@
 
 </head>
 <body>
-    
+
     <div id="form">
-        <h1>Login</h1>
+        <h1>Přihlášení</h1>
         <form name="form" method="POST">
-            <label>Username: </label>
-            <input type="text" id="user" name="user">
+            <label>Email: </label>
+            <input type="email" id="user" name="user">
             <br><br>
-            <label>Password: </label>
+            <label>Heslo: </label>
             <input type="password" id="pass" name="pass">
             <br><br>
-            <input type="submit" id="btn" value="login" name="submit">
+            <input type="submit" id="btn" value="Přihlásit se" name="submit">
         </form>
     </div>
 
