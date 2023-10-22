@@ -1,0 +1,12 @@
+body {
+    background-color: bisque;
+}
+
+#form {
+    background-color: whitesmoke;
+    width: 25%;
+    margin: 120px auto;
+    padding: 50px;
+    box-shadow: 5px 5px 5px rgb(10,10,10);
+    border-radius: 15px;
+}
