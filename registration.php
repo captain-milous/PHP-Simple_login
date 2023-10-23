@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Simple Registration</title>
+    <title>Muj Blog</title>
     <link rel="stylesheet" href="style.css" type="text/css">
 
 </head>
@@ -29,7 +29,6 @@
             <input type="submit" id="btn" value="Registrovat se" name="submit">
             
         </form>
-        <small style="color: red">*Registrace je bohužel dnes mimo provoz.</small>
         <br>
         <small><a href="index.php">Zpět na přihlášení.</a></small>
     </div>

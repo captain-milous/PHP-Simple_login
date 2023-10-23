@@ -10,7 +10,7 @@
         $count = mysqli_num_rows($result);
         if($count == 1) {
             echo '<script> document.getElementById("msg").innerHTML = "Úspěšne přihlášen!";</script>';
-            header("Location: welcome.php");
+            header("Location: view_posts.php");
         } else {
             
             echo '<script>
