@@ -7,13 +7,16 @@
     $check_stmt->store_result();
 
     if ($check_stmt->num_rows > 0) {
-        echo "<script>
+        echo '<script>
             window.location.href = "registration.php";
             alert(Uživatelské jméno již existuje. Zvolte prosím jiné.);
-        </script>";
+        </script>';
     } else {
         if(isset($_POST["submit"])) {
             if($_POST['pass'] == $_POST['pass2']) {
+
+                $username = $_POST['user'];
+                $password = $_POST['pass'];
                 
                 $stmt = $mysqli->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
                 $stmt->bind_param("ss", $username, $password);

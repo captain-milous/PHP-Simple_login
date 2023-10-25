@@ -9,7 +9,7 @@
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
         $count = mysqli_num_rows($result);
         if($count == 1) {
-            echo '<script> document.getElementById("msg").innerHTML = "Úspěšne přihlášen!";</script>';
+            //echo '<script> document.getElementById("msg").innerHTML = "Úspěšne přihlášen!";</script>';
             header("Location: view_posts.php");
         } else {
             

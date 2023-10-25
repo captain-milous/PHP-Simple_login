@@ -1,17 +1,13 @@
 <?php
 session_start();
-
+/*
 if (!isset($_SESSION['user_id'])) {
     header("Location: index.php");
     exit;
-}
+}*/
 
-$mysqli = new mysqli("localhost", "root", "", "blog_db");
-
-if ($mysqli->connect_error) {
-    die("Connection failed: " . $mysqli->connect_error);
-}
-
+include("connect.php");
+/*
 // Získání všech příspěvků
 $query = "SELECT posts.id, posts.title, posts.content, users.username FROM posts INNER JOIN users ON posts.user_id = users.id";
 $result = $mysqli->query($query);
@@ -20,7 +16,7 @@ if (isset($_POST['logout'])) {
     session_destroy();
     header("Location: index.php");
     exit;
-}
+}*/
 ?>
 
 <!DOCTYPE html>
