@@ -7,16 +7,16 @@ if (!isset($_SESSION['user_id'])) {
 }*/
 
 include("connect.php");
-/*
+
 // Získání všech příspěvků
-$query = "SELECT posts.id, posts.title, posts.content, users.username FROM posts INNER JOIN users ON posts.user_id = users.id";
-$result = $mysqli->query($query);
+$query = "SELECT posts.id, posts.title, posts.content FROM posts";
+$result = $conn->query($query);
 
 if (isset($_POST['logout'])) {
     session_destroy();
     header("Location: index.php");
     exit;
-}*/
+}
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +44,6 @@ if (isset($_POST['logout'])) {
             <div>
                 <h2><?php echo $row['title']; ?></h2>
                 <p><?php echo $row['content']; ?></p>
-                <p>Autor: <?php echo $row['username']; ?></p>
             </div>
         <?php endwhile; ?>
         

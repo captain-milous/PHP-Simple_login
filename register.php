@@ -1,7 +1,7 @@
 <?php
     include("connect.php");
 
-    $check_stmt = $mysqli->prepare("SELECT id FROM users WHERE username = ?");
+    $check_stmt = $conn->prepare("SELECT id FROM users WHERE email = ?");
     $check_stmt->bind_param("s", $username);
     $check_stmt->execute();
     $check_stmt->store_result();
@@ -18,7 +18,7 @@
                 $username = $_POST['user'];
                 $password = $_POST['pass'];
                 
-                $stmt = $mysqli->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
+                $stmt = $conn->prepare("INSERT INTO users (email, password) VALUES (?, ?)");
                 $stmt->bind_param("ss", $username, $password);
                 $stmt->execute();
                 $stmt->close();
