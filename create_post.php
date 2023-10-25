@@ -1,24 +1,23 @@
 <?php
 session_start();
-
+/*
 if (!isset($_SESSION['user_id'])) {
     header("Location: index.php");
     exit;
-}
+}*/
 
 if (isset($_POST['create_post'])) {
     $title = $_POST['title'];
     $content = $_POST['content'];
-    $user_id = $_SESSION['user_id'];
 
-    $mysqli = new mysqli("localhost", "root", "", "blog_db");
+    include("connect.php");
 
-    $stmt = $mysqli->prepare("INSERT INTO posts (title, content, user_id) VALUES (?, ?, ?)");
-    $stmt->bind_param("ssi", $title, $content, $user_id);
+    $stmt = $conn->prepare("INSERT INTO posts (title, content) VALUES (?, ?)");
+    $stmt->bind_param("ss", $title, $content);
     $stmt->execute();
     $stmt->close();
 
-    echo "Příspěvek byl úspěšně vytvořen.";
+    echo "<script>consloe.log(Příspěvek byl úspěšně vytvořen.);</script>";
 }
 ?>
 
@@ -35,11 +34,17 @@ if (isset($_POST['create_post'])) {
 
 </head>
 <body>
-    <h1>Vytvořit Příspěvek</h1>
-    <form method="post" action="">
-        <input type="text" name="title" placeholder="Název" required>
-        <textarea name="content" placeholder="Obsah" required></textarea>
-        <input type="submit" name="create_post" value="Vytvořit Příspěvek">
-    </form>
+    <div id="form">
+        <h1>Vytvořit Příspěvek</h1>
+        <form method="post" action="">
+            <input type="text" name="title" placeholder="Název" required>
+            <br><br>
+            <textarea name="content" placeholder="Obsah" required></textarea>
+            <br>
+            <input type="submit" name="create_post" value="Vytvořit Příspěvek">
+        </form>
+        <br>
+        <small><a href="view_posts.php">Zpět</a></small>
+    </div>
 </body>
 </html>

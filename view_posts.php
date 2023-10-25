@@ -33,10 +33,12 @@ if (isset($_POST['logout'])) {
 </head>
 <body>
 
-    <div id="prispevky">
+    <div id="form">
 
         <h1>Všechny Příspěvky</h1>
-        <a href="create_post.php">Přidat nový příspěvek</a>
+        <button>
+            <a href="create_post.php">Nový příspěvek</a>
+        </button>
         <form method="post" action="">
             <input type="submit" name="logout" value="Odhlásit">
         </form>
